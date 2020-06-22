@@ -23,7 +23,7 @@ oc apply -f 'https://strimzi.io/install/latest?namespace=kafka-source-knative'
 To deploy kafka,
 
 ```
-oc apply -f kafka.yaml 
+oc apply -f kafka/kafka.yaml 
 ```
 
 
@@ -37,18 +37,18 @@ oc apply -f https://storage.googleapis.com/knative-releases/eventing-contrib/lat
 To deploy kafka-topic,
 
 ```
-oc apply -f kafka-topic
+oc apply -f kafka/kafka-topic
 ```
 
 Knative event-display will allow us to view messages sent from kafka source 
 To deploy event-display,
 ```
-oc apply -f event-display.yaml
+oc apply -f knative-eventing/event-display.yaml
 ```
 
 To deploy an event-source,
 ```
-oc apply -f event-source.yaml
+oc apply -f knative-eventing/event-source.yaml
 ```
 
 Now we need to create a kafka producer pod so we can send messages to event-display 
