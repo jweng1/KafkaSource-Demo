@@ -51,7 +51,9 @@ To deploy an event-source,
 oc apply -f knative-eventing/event-source.yaml
 ```
 
-Now we need to create a kafka producer pod so we can send messages to event-display 
+Now we need to create a kafka producer pod so we can send data (messages with kafka-producer) to event-display 
 ```
 oc run kafka-producer -ti --image=strimzi/kafka:0.14.0-kafka-2.3.0 --rm=true --restart=Never -- bin/kafka-console-producer.sh --broker-list my-cluster-kafka-bootstrap:9092 --topic knative-demo-topic
 ```
+
+To view data go to event-display pod and view logs
