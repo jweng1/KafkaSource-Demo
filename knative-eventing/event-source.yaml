@@ -1,0 +1,17 @@
+apiVersion: sources.knative.dev/v1alpha1
+kind: KafkaSource
+metadata:
+  name: kafka-source
+  labels:
+    kafkasources.sources.knative.dev/key-type: string
+spec:
+  consumerGroup: knative-group
+  bootstrapServers: 
+  - my-cluster-kafka-bootstrap.kafka-source-knative:9092
+  topics:
+  - knative-demo-topic
+  sink:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: event-display
