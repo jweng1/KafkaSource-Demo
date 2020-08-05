@@ -37,7 +37,7 @@ oc apply -f https://storage.googleapis.com/knative-releases/eventing-contrib/lat
 To deploy kafka-topic,
 
 ```
-oc apply -f kafka/kafka-topic
+oc apply -f kafka/kafka-topic.yaml
 ```
 
 Knative event-display will allow us to view messages sent from kafka source 
