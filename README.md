@@ -1,3 +1,5 @@
+- Redhat Internship Project - Summer 2018
+
 # KafkaSource-Demo
 Setting up kafka source to send data to display with knative event display 
 
